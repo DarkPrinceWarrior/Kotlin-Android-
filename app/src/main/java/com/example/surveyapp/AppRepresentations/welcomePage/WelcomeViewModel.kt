@@ -26,6 +26,7 @@ class WelcomeViewModel @Inject constructor(private val repository: Repository):
     }
 
     fun getAllUsers() {
+        Thread.sleep(100)
         viewModelScope.launch {
 
             val result = repository.getAllUsers()
@@ -51,6 +52,7 @@ class WelcomeViewModel @Inject constructor(private val repository: Repository):
     }
 
     fun getAllRoles() {
+        Thread.sleep(200)
         viewModelScope.launch {
 
             val result = repository.getAllRoles()
@@ -73,20 +75,6 @@ class WelcomeViewModel @Inject constructor(private val repository: Repository):
 
 
     }
-
-
-
-
-
-    fun get_Role(user_id:Int): String {
-        var resp = Role(id=0,name = "007")
-        viewModelScope.launch {
-            resp = repository.get_Role(user_id)
-        }
-        return resp.name
-    }
-
-
 
 
     fun post_deleteUser(email:String){

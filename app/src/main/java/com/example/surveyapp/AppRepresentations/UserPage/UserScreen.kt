@@ -186,7 +186,7 @@ fun RoundImage(
 //
     var gender_image = painterResource(id = com.example.surveyapp.R.drawable.man)
 
-    if (modifier1=="Female"){
+    if (modifier1=="Женщина"){
         gender_image = painterResource(id = com.example.surveyapp.R.drawable.woman)
     }
 
