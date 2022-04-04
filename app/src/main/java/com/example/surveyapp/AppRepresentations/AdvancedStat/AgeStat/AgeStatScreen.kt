@@ -19,6 +19,7 @@ import com.example.surveyapp.AppRepresentations.AdvancedStat.AdvancedStatModel
 import com.example.surveyapp.AppRepresentations.AdvancedStat.AdvancedStatScreenBackground
 import com.example.surveyapp.AppRepresentations.Drawer
 import com.example.surveyapp.AppRepresentations.TopBar
+import com.example.surveyapp.Screen
 import com.example.surveyapp.remote.responses.attempt.attemptsItem
 import com.example.surveyapp.remote.responses.userResults.UserResults
 
@@ -31,8 +32,9 @@ fun AgeStatScreen(
 
     // Доработать в дальнейшем
     BackHandler(enabled = true, onBack = {
-
-
+        navController.navigate(
+            Screen.AdvancedStatScreen.route
+        )
 
     })
 

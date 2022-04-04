@@ -26,7 +26,7 @@ class WelcomeViewModel @Inject constructor(private val repository: Repository):
     }
 
     fun getAllUsers() {
-        Thread.sleep(100)
+//        Thread.sleep(100)
         viewModelScope.launch {
 
             val result = repository.getAllUsers()
@@ -52,7 +52,7 @@ class WelcomeViewModel @Inject constructor(private val repository: Repository):
     }
 
     fun getAllRoles() {
-        Thread.sleep(200)
+//        Thread.sleep(100)
         viewModelScope.launch {
 
             val result = repository.getAllRoles()

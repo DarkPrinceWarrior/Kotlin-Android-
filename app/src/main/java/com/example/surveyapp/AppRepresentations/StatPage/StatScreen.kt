@@ -1,5 +1,6 @@
 package com.example.surveyapp.AppRepresentations.StatPage
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -104,6 +105,15 @@ fun Statistic(navController: NavController, viewModel: StatViewModel = hiltViewM
 
 @Composable
 fun ButtonPanel(navController: NavController, userAttempts: MutableList<attemptsItem>) {
+
+    // Доработать в дальнейшем
+    BackHandler(enabled = true, onBack = {
+        val prev_screen_name = "user_stat_screen"
+        navController.navigate(
+            Screen.MainScreen.route + "/$prev_screen_name"
+        )
+
+    })
 
 
     for(attempt in userAttempts){

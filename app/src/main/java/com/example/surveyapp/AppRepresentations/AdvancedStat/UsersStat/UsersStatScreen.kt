@@ -48,8 +48,9 @@ fun UsersStatScreen(navController: NavController,
 
     // Доработать в дальнейшем
     BackHandler(enabled = true, onBack = {
-
-//        navController.popBackStack()
+        navController.navigate(
+            Screen.AdvancedStatScreen.route
+        )
 
     })
 

@@ -23,7 +23,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.example.surveyapp.AppRepresentations.CheckUser.checkBefore_Stats_Profile
 import com.example.surveyapp.AppRepresentations.QuestsPage.StartTest
 import com.example.surveyapp.Screen
 import com.example.surveyapp.remote.responses.Users.User
@@ -101,11 +100,11 @@ fun MainScreen1(navController: NavController,
 
                     Button(onClick = {
 
-                        if(checkBefore_Stats_Profile()){
+
                             navController.navigate(
                                 Screen.UserDetailsScreen.route
                             )
-                        }
+
 
 
                     },shape = RoundedCornerShape(16.dp),
@@ -121,11 +120,11 @@ fun MainScreen1(navController: NavController,
                     if(user_role.value!="scientist"){
                         Button(onClick = {
 
-                            if(checkBefore_Stats_Profile()){
+
                                 navController.navigate(
                                     Screen.StatisticScreen.route
                                 )
-                            }
+
 
 
                         },shape = RoundedCornerShape(16.dp),

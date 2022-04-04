@@ -41,13 +41,6 @@ interface SimpleAPI {
     suspend fun getAllUsers(
     ): Users
 
-    @GET("Quest/{id}")
-    suspend fun getQuest(
-        @Path("id") id: Int
-    ): QuestsItem
-
-
-
 
     @GET("Quests")
     suspend fun getQuests(

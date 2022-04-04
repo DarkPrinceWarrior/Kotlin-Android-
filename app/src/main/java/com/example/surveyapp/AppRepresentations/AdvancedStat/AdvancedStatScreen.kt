@@ -16,7 +16,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.example.surveyapp.AppRepresentations.CheckUser.checkBefore_Stats_Profile
 import com.example.surveyapp.AppRepresentations.Drawer
 import com.example.surveyapp.AppRepresentations.MainPage.MainViewModel
 import com.example.surveyapp.AppRepresentations.TopAppBarCompose
@@ -44,8 +43,10 @@ fun AdvancedStatScreen(navController: NavController){
 
     // Доработать в дальнейшем
     BackHandler(enabled = true, onBack = {
-
-//        navController.popBackStack()
+        val cur_screen = "stat_menu_for_scientsist"
+        navController.navigate(
+            Screen.MainScreen.route + "/$cur_screen"
+        )
 
     })
 

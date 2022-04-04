@@ -59,7 +59,7 @@ fun ResetScreen(navController: NavController,
 
     }
 
-    email="safaev.rus@gmail.com"
+//    email="safaev.rus@gmail.com"
 //    password="1205e8hurhg7h"
 //    confirmPassword = password
 

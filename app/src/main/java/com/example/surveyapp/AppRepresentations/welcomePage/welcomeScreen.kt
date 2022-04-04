@@ -68,8 +68,12 @@ fun WelcomeScreen(navController: NavController,
     }
 //    email = "safaev.rus@gmail.com"
 //    password = "ruslan12"
+//    email = "safaev.rus@gmail.com"
     email = "ruslan.ussr@gmail.com"
     password = "1234567rus"
+
+    // admin
+//    email = "julia@gmail.com"
 
     // progress circle while log in
     val progressDialog = ProgressDialog(context)

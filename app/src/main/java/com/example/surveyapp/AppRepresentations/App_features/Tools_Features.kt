@@ -257,7 +257,7 @@ fun Drawer(navController: NavController, scope: CoroutineScope, scaffoldState: S
                 text = "Мадди",
                 color = Color.White,
                 fontSize = 45.sp,
-                textAlign = TextAlign.Center,
+                textAlign = TextAlign.Left,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .padding(12.dp)
@@ -273,7 +273,7 @@ fun Drawer(navController: NavController, scope: CoroutineScope, scaffoldState: S
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
                 .fillMaxSize()
-                .padding(32.dp)
+                .padding(20.dp)
         )
         {
             DrawerItem(navController,title=" • Главное меню",scaffoldState = scaffoldState)

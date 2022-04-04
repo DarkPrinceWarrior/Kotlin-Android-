@@ -229,10 +229,10 @@ fun QuestsScreen(
 
 //                      Счет в секундах
                         attempt_time.value = timer(
-                            totalTime = 420L * 1000L,timeOver
+                            totalTime = 420L * 80L,timeOver
 
                         )
-
+//                        totalTime = 420L * 1000L
 
                         val minutes = (attempt_time.value % 3600) / 60;
                         seconds = (attempt_time.value % 60).toInt();
@@ -245,7 +245,7 @@ fun QuestsScreen(
 
 
 
-                            val message = "The question is $question_number/45 \n" +
+                            val message = "Вопрос - $question_number/45 \n" +
                                     timeString
                             val size: TextUnit = 25.sp
                             Text(

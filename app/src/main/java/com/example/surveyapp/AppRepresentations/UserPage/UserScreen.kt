@@ -1,6 +1,7 @@
 package com.example.surveyapp.AppRepresentations.UserPage
 
 import android.widget.Toast
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -40,6 +41,16 @@ fun UserDetails(
     viewModel: UserViewModel = hiltViewModel(),
 
 ) {
+
+
+    // Доработать в дальнейшем
+    BackHandler(enabled = true, onBack = {
+        val prev_screen_name = "user_profile"
+        navController.navigate(
+            Screen.MainScreen.route + "/$prev_screen_name"
+        )
+
+    })
 
     val scope = rememberCoroutineScope()
 

@@ -25,8 +25,10 @@ import com.example.surveyapp.AppRepresentations.TestResults.ResultScreen
 
 import com.example.surveyapp.AppRepresentations.UserPage.UserDetails
 import com.example.surveyapp.AppRepresentations.UserPage.UserEditPage.UserEditProfile
+import com.example.surveyapp.AppRepresentations.user_role
 //import com.example.surveyapp.AppRepresentations.welcomePage.CheckUserState
 import com.example.surveyapp.AppRepresentations.welcomePage.WelcomeScreen
+import com.example.surveyapp.AppRepresentations.welcomePage.WelcomeViewModel
 import com.example.surveyapp.remote.responses.attempt.attemptsItem
 import com.example.surveyapp.remote.responses.userResults.UserResults
 import com.google.firebase.auth.FirebaseAuth
@@ -36,6 +38,8 @@ import com.google.firebase.ktx.Firebase
 
 @Composable
 fun Navigation(viewModel: QuestsViewModel = hiltViewModel()){
+
+
     val navController = rememberNavController()
 
     // load the questions
@@ -43,8 +47,6 @@ fun Navigation(viewModel: QuestsViewModel = hiltViewModel()){
 
     // load the questions balls
     val QuestsBallsList by remember { viewModel.QuestsBallsList }
-
-
 
     NavHost(navController = navController,
         startDestination = Screen.PreLunchScreen.route){
@@ -142,6 +144,12 @@ fun Navigation(viewModel: QuestsViewModel = hiltViewModel()){
 
 
         }
+
+//        composable(route = Screen.MainScreen.route){
+////
+//            MainScreen1(navController = navController)
+//
+//        }
         composable(route = Screen.StartTestScreen.route){
             StartTest(navController = navController)
         }

@@ -63,12 +63,6 @@ class Repository @Inject constructor(
     }
 
 
-    suspend fun get_Role(user_id: Int): Role {
-
-            return api.get_Role(user_id)
-
-    }
-
     suspend fun getAllRoles(): Resource<Roles> {
 
         val response = try {
@@ -188,9 +182,6 @@ class Repository @Inject constructor(
         return api.post_UpdateAnswer(new_choice,answer)
     }
 
-    suspend fun get_User(email: String): User {
-        return api.get_User(email)
-    }
 
     suspend fun post_deleteUser(email: String): Response<User> {
 
@@ -216,9 +207,6 @@ class Repository @Inject constructor(
         }
         return Resource.Success(response)
     }
-
-
-
 
 
 }

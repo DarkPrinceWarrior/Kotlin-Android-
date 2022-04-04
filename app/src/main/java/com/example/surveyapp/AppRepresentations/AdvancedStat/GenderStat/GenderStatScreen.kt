@@ -20,6 +20,7 @@ import com.example.surveyapp.AppRepresentations.AdvancedStat.AdvancedStatScreenB
 import com.example.surveyapp.AppRepresentations.Drawer
 import com.example.surveyapp.AppRepresentations.TopBar
 import com.example.surveyapp.AppRepresentations.user_role
+import com.example.surveyapp.Screen
 import com.example.surveyapp.remote.responses.attempt.attemptsItem
 import com.example.surveyapp.remote.responses.userResults.UserResults
 
@@ -30,9 +31,12 @@ fun GenderStatScreen(
 ) {
 
     viewModel.Compute_Gender_General_Result()
+
     // Доработать в дальнейшем
     BackHandler(enabled = true, onBack = {
-
+        navController.navigate(
+            Screen.AdvancedStatScreen.route
+        )
 
     })
 
